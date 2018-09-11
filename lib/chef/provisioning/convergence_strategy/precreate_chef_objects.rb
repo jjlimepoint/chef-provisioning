@@ -251,7 +251,15 @@ module Provisioning
           EOM
         end
         content.gsub!(/^\s+/, "")
-        content << convergence_options[:chef_config] if convergence_options[:chef_config]
+        content << convergence_options[:chef_config] if convergence_options[:chef_config] and convergence_options[:chef_config].is_a?(String)
+        if convergence_options[:chef_config] and convergence_options[:chef_config].is_a?(Hash)
+          convergence_options[:chef_config] do |option, value|
+            content <<-EOM
+              #{option.to_s} #{value.inspect}
+            EOM
+          end
+        end
+
         content
       end
     end
