@@ -255,7 +255,7 @@ module Provisioning
           content << convergence_options[:chef_config]
         elsif convergence_options[:chef_config].is_a?(Hash)
           convergence_options[:chef_config].each do |option, value|
-            content <<-EOM
+            content << <<-EOM
               #{option.to_s} #{value.inspect}
             EOM
           end
