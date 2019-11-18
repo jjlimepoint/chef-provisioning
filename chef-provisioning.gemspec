@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'cheffish', '>= 4.0', '< 15.0'
   s.add_dependency 'chef', '>= 4.0', '< 15.0'
   s.add_dependency 'winrm', '~> 2.0'
-  s.add_dependency 'winrm-fs', '~> 1.0'
+  s.add_dependency 'winrm-fs', '= 1.3.3'
   s.add_dependency 'winrm-elevated', '~> 1.0'
   s.add_dependency "mixlib-install",  ">= 1.0"
 
