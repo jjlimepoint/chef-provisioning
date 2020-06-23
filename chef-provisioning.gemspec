@@ -12,13 +12,14 @@ Gem::Specification.new do |s|
   s.license = "Apache-2.0"
   s.required_ruby_version = ">= 2.2.2"
 
-  s.add_dependency 'net-ssh', '>= 2.9', '< 6.0'
+  s.add_dependency 'net-ssh', '>= 2.9', '< 7.0'
   s.add_dependency 'net-scp', '> 1.0', '< 3.0'
   s.add_dependency 'net-ssh-gateway', '> 1.2', '< 4.0'
   s.add_dependency 'inifile', '>= 2.0.2'
   s.add_dependency 'cheffish', '>= 4.0', '< 17.0'
+  s.add_dependency 'chef', '>= 4.0', '< 17.0'
   s.add_dependency 'winrm', '~> 2.0'
-  s.add_dependency 'winrm-fs', '~> 1.0'
+  s.add_dependency 'winrm-fs', '= 1.3.3'
   s.add_dependency 'winrm-elevated', '~> 1.0'
   s.add_dependency "mixlib-install",  ">= 1.0"
 
